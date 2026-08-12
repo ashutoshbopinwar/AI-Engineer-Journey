@@ -77,6 +77,9 @@ print("-"*40)
 print(f"Day   : {days[best_sales_day_index]}")
 print(f"Revenue   : {daily_revenue[best_sales_day_index]:,.2f}")
 
+# Average daily revenue
+average_revenue = np.mean(daily_revenue)
+
 print("\nAVERAGE DAILY REVENUE")
 print("-" * 40)
 print(f"₹{average_revenue:,.2f}")
