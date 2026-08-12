@@ -18,3 +18,22 @@ sales = np.array([
     [12, 22, 30, 18, 40],
     [9, 16, 22, 13, 32]
 ])
+
+#  Product Prices
+prices = np.array([
+    60000,
+    25000,
+    2000,
+    3000,
+    1500
+])
+
+print("="*60)
+print("        SALES DATA ANALYZER")
+print("="*60)
+
+# Total Sales Of Each Product
+total_product_sales = np.sum(sales, axis=0)
+
+print("\nTotal Sales By Product : ")
+print("-"*60)
