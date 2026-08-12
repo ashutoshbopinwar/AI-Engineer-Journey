@@ -37,3 +37,51 @@ total_product_sales = np.sum(sales, axis=0)
 
 print("\nTotal Sales By Product : ")
 print("-"*60)
+
+for i in range(len(products)):
+    print(f"{products[i]:15} : {total_product_sales[i]} units sold")
+    
+# Best Selling Product :
+best_selling_index = np.argmax(total_product_sales)
+
+print("\nBEST SELLING PRODUCT : ")
+print("-"*40)
+print(f"product:{products[best_selling_index]}")
+print(f"Units Sold : {total_product_sales[best_selling_index]}")
+
+# Calculate Revenue
+revenue = sales * prices
+
+# Total Revenue 
+total_revenue = np.sum(revenue)
+
+print("\nTOTAL REVENUE : ")
+print("-"*40)
+print(f"{total_revenue:,.2f}")
+
+# Daily Revenue
+daily_revenue = np.sum(revenue,axis=1)
+
+print("\n DAILY REVENUE")
+print("-"*40)
+
+for i in range(len(days)):
+    print(f"{days[i]:12} : ₹{daily_revenue[i]:,.2f}")
+    
+
+# Best Sales Day 
+best_sales_day_index = np.argmax(daily_revenue)
+
+print("\n BEST SALES DAY")
+print("-"*40)
+print(f"Day   : {days[best_sales_day_index]}")
+print(f"Revenue   : {daily_revenue[best_sales_day_index]:,.2f}")
+
+print("\nAVERAGE DAILY REVENUE")
+print("-" * 40)
+print(f"₹{average_revenue:,.2f}")
+
+
+print("\n" + "=" * 60)
+print("                 END OF REPORT")
+print("=" * 60)
